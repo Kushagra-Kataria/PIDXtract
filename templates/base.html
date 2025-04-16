@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered P&ID Analysis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <!-- Additional CSS can be included here -->
+</head>
+<body class="dark-theme">
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="/">P&ID AI</a>
+                </div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#demo">Demo</a>
+                    <a href="#tech-stack">Tech Stack</a>
+                    <a href="#use-cases">Use Cases</a>
+                    <a href="#team">Team</a>
+                    <a href="/contact" class="contact-btn">Contact</a>
+                </div>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="flash-messages" class="flash-messages">
+            <!-- Flash messages will be inserted here via JavaScript -->
+        </div>
+
+        <!-- Content will be inserted here -->
+        <div id="content">
+            <!-- Page content -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>P&ID AI</h3>
+                    <p>Transforming engineering diagrams into actionable data</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigate</h4>
+                        <a href="#about">About</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#demo">Demo</a>
+                        <a href="#tech-stack">Tech Stack</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <a href="#use-cases">Use Cases</a>
+                        <a href="#team">Team</a>
+                        <a href="/contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> P&ID AI Analysis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    <script>
+        // Add the current year to the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Check for message in URL and display it as a flash message
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('message');
+
+            if (message) {
+                const flashMessages = document.getElementById('flash-messages');
+
+                const flashMessage = document.createElement('div');
+                flashMessage.className = 'flash-message success';
+                flashMessage.innerHTML = `
+                    ${message}
+                    <span class="close-btn"><i class="fas fa-times"></i></span>
+                `;
+
+                flashMessages.appendChild(flashMessage);
+
+                // Add close button functionality
+                const closeBtn = flashMessage.querySelector('.close-btn');
+                closeBtn.addEventListener('click', function() {
+                    flashMessage.style.opacity = '0';
+                    setTimeout(() => {
+                        flashMessage.remove();
+                    }, 300);
+                });
+
+                // Auto-fade after 5 seconds
+                setTimeout(() => {
+                    flashMessage.style.opacity = '0';
+                    setTimeout(() => {
+                        flashMessage.remove();
+                    }, 300);
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>

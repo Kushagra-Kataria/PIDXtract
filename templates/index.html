@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Extraction and Analysis of Information from P&ID Diagrams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="/">P&ID AI</a>
+                </div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#demo">Demo</a>
+                    <a href="#tech-stack">Tech Stack</a>
+                    <a href="#use-cases">Use Cases</a>
+                    <a href="#team">Team</a>
+                    <a href="/contact" class="contact-btn">Contact</a>
+                </div>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="flash-messages" class="flash-messages">
+            <!-- Flash messages will be inserted here via JavaScript -->
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content animate-on-scroll" data-animation="slide-right">
+                    <h1>AI-Powered Extraction and Analysis of Information from P&ID Diagrams</h1>
+                    <p>Transform complex engineering diagrams into actionable digital data using cutting-edge AI technology combining image recognition and natural language processing.</p>
+                    <div class="hero-btns">
+                        <a href="#demo" class="btn">Try Demo</a>
+                        <a href="#about" class="btn" style="background-color: transparent; border: 1px solid var(--accent-primary);">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- <img src="/static/images/hero-image.png" alt="P&ID Diagram Analysis" class="animate-on-scroll" data-animation="fade-in"> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About the Project</h2>
+                    <p>Understanding the challenges of manual P&ID processing and how our AI solution addresses them</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-image animate-on-scroll" data-animation="slide-right">
+                        <img src="/static/images/about-image.png" alt="P&ID Diagram Example">
+                    </div>
+                    <div class="about-text animate-on-scroll" data-animation="slide-left">
+                        <h3>The Challenge of P&ID Diagrams</h3>
+                        <p>Piping and Instrumentation Diagrams (P&IDs) are complex engineering schematics that represent the functional relationship between piping, instrumentation, and system components in industrial processes.</p>
+                        <p>Engineers and operators face significant challenges when working with these diagrams:</p>
+                        <ul style="margin-bottom: 20px; padding-left: 20px;">
+                            <li>Time-consuming manual data extraction</li>
+                            <li>Error-prone information transfer process</li>
+                            <li>Difficulty in keeping documentation synchronized</li>
+                            <li>Inconsistencies between physical systems and documentation</li>
+                        </ul>
+                        <h3>Our AI Solution</h3>
+                        <p>Our project leverages advanced AI technologies to automatically extract, analyze, and digitize information from P&ID diagrams, enabling seamless integration with digital systems and significant time savings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <div class="section-title">
+                    <h2>How It Works</h2>
+                    <p>Our advanced AI processing pipeline transforms complex P&ID diagrams into structured digital data through a multi-step approach</p>
+                </div>
+                <div class="steps">
+                    <div class="step animate-on-scroll" data-animation="slide-up">
+                        <div class="step-icon">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <h4>Upload</h4>
+                        <p>Upload your P&ID diagram in various formats including PDF, PNG, JPEG, or TIFF.</p>
+                    </div>
+                    <div class="step animate-on-scroll" data-animation="slide-up" style="transition-delay: 0.2s;">
+                        <div class="step-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h4>Image Recognition</h4>
+                        <p>Our advanced computer vision algorithms identify symbols, text, and connections in the diagram.</p>
+                    </div>
+                    <div class="step animate-on-scroll" data-animation="slide-up" style="transition-delay: 0.4s;">
+                        <div class="step-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>NLP Processing</h4>
+                        <p>Natural Language Processing extracts and interprets textual elements and their relationships.</p>
+                    </div>
+                    <div class="step animate-on-scroll" data-animation="slide-up" style="transition-delay: 0.6s;">
+                        <div class="step-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Data Output</h4>
+                        <p>Receive structured data in multiple formats including JSON, CSV, or direct database integration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Section -->
+        <section id="demo" class="demo">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Interactive Demo</h2>
+                    <p>Experience the power of our AI engine by trying it with a sample P&ID diagram</p>
+                </div>
+                <div class="demo-container">
+                    <div class="demo-upload animate-on-scroll" data-animation="fade-in">
+                        <h3>Upload Your P&ID Diagram</h3>
+                        <p>Click below to upload a diagram or use one of our sample diagrams for demonstration</p>
+                        <div class="upload-area">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <p>Drag & drop your P&ID diagram here or click to browse</p>
+                        </div>
+                    </div>
+                    <div class="demo-result">
+                        <div class="result-header">
+                            <h3>Analysis Results</h3>
+                            <div class="result-tabs">
+                                <div class="result-tab active" data-target="visual">Visual</div>
+                                <div class="result-tab" data-target="json">JSON</div>
+                                <div class="result-tab" data-target="components">Components</div>
+                                <div class="result-tab" data-target="connections">Connections</div>
+                            </div>
+                        </div>
+                        <div class="result-content active" data-content="visual">
+                            <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                                <div style="flex: 1;">
+                                    <h4>Original Diagram</h4>
+                                    <img src="/static/images/sample-pid.png" alt="Sample P&ID" style="width: 100%; border-radius: 4px;">
+                                </div>
+                                <div style="flex: 1;">
+                                    <h4>Annotated Diagram</h4>
+                                    <img src="/static/images/sample-pid-annotated.png" alt="Annotated P&ID" style="width: 100%; border-radius: 4px;">
+                                </div>
+                            </div>
+                            <p>The AI system has identified and classified 45 components and 67 connections with 98.5% accuracy.</p>
+                        </div>
+                        <div class="result-content" data-content="json">
+                            <h4>JSON Output</h4>
+                            <pre style="background-color: var(--bg-secondary); padding: 20px; border-radius: 4px; overflow-x: auto; color: var(--text-secondary);">
+{
+  "diagram_id": "PID-1234-A",
+  "components": [
+    {
+      "id": "V-101",
+      "type": "vessel",
+      "description": "Feed Vessel",
+      "coordinates": [120, 350, 180, 450],
+      "connected_to": ["P-101", "V-102"]
+    },
+    {
+      "id": "P-101",
+      "type": "pump",
+      "description": "Feed Pump",
+      "coordinates": [250, 400, 300, 450],
+      "connected_to": ["V-101", "E-101"]
+    },
+    // ... more components
+  ],
+  "connections": [
+    {
+      "id": "L-1",
+      "type": "pipe",
+      "from": "V-101",
+      "to": "P-101",
+      "specs": {
+        "size": "2 inch",
+        "material": "carbon steel"
+      }
+    },
+    // ... more connections
+  ],
+  "metadata": {
+    "analysis_time": "2.4s",
+    "confidence_score": 0.985,
+    "version": "1.2.0"
+  }
+}</pre>
+                        </div>
+                        <div class="result-content" data-content="components">
+                            <h4>Extracted Components</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                                <div style="background-color: var(--bg-secondary); padding: 15px; border-radius: 4px;">
+                                    <h5>V-101</h5>
+                                    <p>Feed Vessel</p>
+                                    <p><small>Type: Vessel</small></p>
+                                </div>
+                                <div style="background-color: var(--bg-secondary); padding: 15px; border-radius: 4px;">
+                                    <h5>P-101</h5>
+                                    <p>Feed Pump</p>
+                                    <p><small>Type: Pump</small></p>
+                                </div>
+                                <div style="background-color: var(--bg-secondary); padding: 15px; border-radius: 4px;">
+                                    <h5>E-101</h5>
+                                    <p>Heat Exchanger</p>
+                                    <p><small>Type: Heat Exchanger</small></p>
+                                </div>
+                                <div style="background-color: var(--bg-secondary); padding: 15px; border-radius: 4px;">
+                                    <h5>V-102</h5>
+                                    <p>Buffer Tank</p>
+                                    <p><small>Type: Vessel</small></p>
+                                </div>
+                                <div style="background-color: var(--bg-secondary); padding: 15px; border-radius: 4px;">
+                                    <h5>FT-101</h5>
+                                    <p>Flow Transmitter</p>
+                                    <p><small>Type: Instrument</small></p>
+                                </div>
+                                <div style="background-color: var(--bg-secondary); padding: 15px; border-radius: 4px;">
+                                    <h5>TCV-101</h5>
+                                    <p>Temperature Control Valve</p>
+                                    <p><small>Type: Control Valve</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-content" data-content="connections">
+                            <h4>Extracted Connections</h4>
+                            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                                <thead>
+                                    <tr style="background-color: var(--bg-secondary);">
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--bg-tertiary);">ID</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--bg-tertiary);">Type</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--bg-tertiary);">From</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--bg-tertiary);">To</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--bg-tertiary);">Specifications</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">L-1</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">Pipe</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">V-101</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">P-101</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">2 inch, Carbon Steel</td>
+                                    </tr>
+                                    <tr style="background-color: var(--bg-secondary);">
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">L-2</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">Pipe</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">P-101</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">E-101</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">2 inch, Carbon Steel</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">L-3</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">Pipe</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">E-101</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">V-102</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">1.5 inch, Stainless Steel</td>
+                                    </tr>
+                                    <tr style="background-color: var(--bg-secondary);">
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">S-1</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">Signal</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">FT-101</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">TCV-101</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid var(--bg-tertiary);">4-20 mA</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech-stack" class="tech-stack">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Technology Stack</h2>
+                    <p>Powered by cutting-edge technologies and frameworks in computer vision, machine learning, and web development</p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item animate-on-scroll" data-animation="slide-up">
+                        <div class="tech-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4>OpenCV</h4>
+                        <p>Advanced computer vision algorithms for image preprocessing and feature detection</p>
+                    </div>
+                    <div class="tech-item animate-on-scroll" data-animation="slide-up" style="transition-delay: 0.2s;">
+                        <div class="tech-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>TensorFlow</h4>
+                        <p>Deep learning framework for training and deploying neural network models</p>
+                    </div>
+                    <div class="tech-item animate-on-scroll" data-animation="slide-up" style="transition-delay: 0.3s;">
+                        <div class="tech-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h4>OCR</h4>
+                        <p>Optical Character Recognition for extracting text from diagram components</p>
+                    </div>
+                    <div class="tech-item animate-on-scroll" data-animation="slide-up" style="transition-delay: 0.4s;">
+                        <div class="tech-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>NLP</h4>
+                        <p>Natural Language Processing to understand relationships and context</p>
+                    </div>
+                    <div class="tech-item animate-on-scroll" data-animation="slide-up" style="transition-delay: 0.5s;">
+                        <div class="tech-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h4>Python</h4>
+                        <p>Core programming language with extensive libraries for data processing</p>
+                    </div>
+                    <div class="tech-item animate-on-scroll" data-animation="slide-up" style="transition-delay: 0.6s;">
+                        <div class="tech-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h4>Flask</h4>
+                        <p>Lightweight web framework for the application interface and API</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section id="use-cases" class="use-cases">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Industry Applications</h2>
+                    <p>Our solution delivers significant benefits across multiple industries and use cases</p>
+                </div>
+                <div class="cases-grid">
+                    <div class="case-item animate-on-scroll" data-animation="fade-in">
+                        <div class="case-image">
+                            <img src="/static/images/use-case-1.jpg" alt="Asset Management">
+                        </div>
+                        <div class="case-content">
+                            <h4>Asset Management</h4>
+                            <p>Automatically catalog equipment and instruments from P&IDs into asset management systems, ensuring accurate digital representation of physical assets.</p>
+                        </div>
+                    </div>
+                    <div class="case-item animate-on-scroll" data-animation="fade-in" style="transition-delay: 0.2s;">
+                        <div class="case-image">
+                            <img src="/static/images/use-case-2.jpg" alt="Process Optimization">
+                        </div>
+                        <div class="case-content">
+                            <h4>Process Optimization</h4>
+                            <p>Convert P&IDs into digital models for simulation and optimization, identifying bottlenecks and improvement opportunities.</p>
+                        </div>
+                    </div>
+                    <div class="case-item animate-on-scroll" data-animation="fade-in" style="transition-delay: 0.4s;">
+                        <div class="case-image">
+                            <img src="/static/images/use-case-3.jpg" alt="Maintenance Planning">
+                        </div>
+                        <div class="case-content">
+                            <h4>Maintenance Planning</h4>
+                            <p>Extract equipment details to create comprehensive maintenance schedules and procedures, reducing downtime and extending asset lifecycle.</p>
+                        </div>
+                    </div>
+                    <div class="case-item animate-on-scroll" data-animation="fade-in" style="transition-delay: 0.6s;">
+                        <div class="case-image">
+                            <img src="/static/images/use-case-4.jpg" alt="Regulatory Compliance">
+                        </div>
+                        <div class="case-content">
+                            <h4>Regulatory Compliance</h4>
+                            <p>Automatically generate documentation for regulatory submissions and audits, ensuring all components are properly documented and tracked.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Team</h2>
+                    <p>Meet the talented individuals behind this innovative project</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member animate-on-scroll" data-animation="slide-up">
+                        <div class="member-image">
+                            <img src="/static/images/team-1.jpg" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h4>Dr. Sarah Johnson</h4>
+                            <p>Project Lead / AI Specialist</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member animate-on-scroll" data-animation="slide-up" style="transition-delay: 0.2s;">
+                        <div class="member-image">
+                            <img src="/static/images/team-2.jpg" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h4>Michael Chen</h4>
+                            <p>Computer Vision Engineer</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member animate-on-scroll" data-animation="slide-up" style="transition-delay: 0.4s;">
+                        <div class="member-image">
+                            <img src="/static/images/team-3.jpg" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h4>Emma Patel</h4>
+                            <p>NLP Specialist</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member animate-on-scroll" data-animation="slide-up" style="transition-delay: 0.6s;">
+                        <div class="member-image">
+                            <img src="/static/images/team-4.jpg" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h4>David Rodriguez</h4>
+                            <p>Process Engineering Consultant</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>P&ID AI</h3>
+                    <p>Transforming engineering diagrams into actionable data</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigate</h4>
+                        <a href="#about">About</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#demo">Demo</a>
+                        <a href="#tech-stack">Tech Stack</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <a href="#use-cases">Use Cases</a>
+                        <a href="#team">Team</a>
+                        <a href="/contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> P&ID AI Analysis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    <script>
+        // Add the current year to the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Check for message in URL and display it as a flash message
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('message');
+
+            if (message) {
+                const flashMessages = document.getElementById('flash-messages');
+
+                const flashMessage = document.createElement('div');
+                flashMessage.className = 'flash-message success';
+                flashMessage.innerHTML = `
+                    ${message}
+                    <span class="close-btn"><i class="fas fa-times"></i></span>
+                `;
+
+                flashMessages.appendChild(flashMessage);
+
+                // Add close button functionality
+                const closeBtn = flashMessage.querySelector('.close-btn');
+                closeBtn.addEventListener('click', function() {
+                    flashMessage.style.opacity = '0';
+                    setTimeout(() => {
+                        flashMessage.remove();
+                    }, 300);
+                });
+
+                // Auto-fade after 5 seconds
+                setTimeout(() => {
+                    flashMessage.style.opacity = '0';
+                    setTimeout(() => {
+                        flashMessage.remove();
+                    }, 300);
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>

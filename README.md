@@ -1,73 +1,70 @@
-# Welcome to your Lovable project
+# AI-Powered P&ID Analysis Website
 
-## Project info
+A web platform for a project that uses artificial intelligence to extract and analyze information from Piping & Instrumentation Diagrams (P&IDs).
 
-**URL**: https://lovable.dev/projects/a816c06a-f23f-46d1-882e-127bb0d1dc07
+## Features
 
-## How can I edit this code?
+- Interactive landing page with animated elements
+- Detailed explanation of P&ID analysis challenges and AI solution
+- Interactive demo with sample diagrams and results
+- Technology stack overview
+- Industry use cases
+- Team section
+- Contact form
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- Python 3.8+
+- Flask 2.2.3
+- Flask-WTF for form handling
+- Jinja2 templates
+- HTML/CSS/JavaScript
+- Font Awesome for icons
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a816c06a-f23f-46d1-882e-127bb0d1dc07) and start prompting.
+## Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Clone the repository
+2. Create and activate a virtual environment:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-**Use your preferred IDE**
+## Running the Application
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. Set the Flask application:
+   ```
+   export FLASK_APP=app.py  # On Windows: set FLASK_APP=app.py
+   ```
+2. Run the application:
+   ```
+   flask run --host=0.0.0.0
+   ```
+   Or simply:
+   ```
+   python app.py
+   ```
+3. Open your browser and navigate to `http://localhost:5000`
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Project Structure
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a816c06a-f23f-46d1-882e-127bb0d1dc07) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+pid_analysis_website/
+├── app.py                 # Main Flask application
+├── requirements.txt       # Project dependencies
+├── static/                # Static assets
+│   ├── css/               # CSS files
+│   │   └── main.css       # Main stylesheet
+│   ├── js/                # JavaScript files
+│   │   └── main.js        # Main JavaScript file
+│   └── images/            # Image assets
+├── templates/             # Jinja2 templates
+│   ├── base.html          # Base template with common elements
+│   ├── index.html         # Home page template
+│   └── contact.html       # Contact page template
+└── README.md              # Project documentation
+```
