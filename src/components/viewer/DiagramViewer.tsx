@@ -1,9 +1,9 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ZoomIn, ZoomOut, RotateCw, Maximize, Layers, Tag, Info } from 'lucide-react';
+import { ZoomIn, ZoomOut, RotateCw, Maximize, Layers, Tag, Info, Search } from 'lucide-react';
+import { Input } from "@/components/ui/input";
 
 const DiagramViewer = () => {
   const [scale, setScale] = useState(1);
