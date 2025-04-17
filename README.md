@@ -1,70 +1,103 @@
-# AI-Powered P&ID Analysis Website
 
-A web platform for a project that uses artificial intelligence to extract and analyze information from Piping & Instrumentation Diagrams (P&IDs).
+# 🛠️ P&ID Diagram Symbol Detection and Graph Construction
 
-## Features
+This project leverages deep learning (YOLO), Optical Character Recognition (PaddleOCR), and computer vision techniques (OpenCV) to automatically detect symbols in Process & Instrumentation Diagrams (P&IDs), extract surrounding textual information, and construct an intelligent graph representing the relationships between components.
 
-- Interactive landing page with animated elements
-- Detailed explanation of P&ID analysis challenges and AI solution
-- Interactive demo with sample diagrams and results
-- Technology stack overview
-- Industry use cases
-- Team section
-- Contact form
+---
 
-## Tech Stack
+## 🚀 Features
 
-- Python 3.8+
-- Flask 2.2.3
-- Flask-WTF for form handling
-- Jinja2 templates
-- HTML/CSS/JavaScript
-- Font Awesome for icons
+- **Symbol Detection:** Uses YOLOv8 model to detect predefined industrial symbols like valves, sensors, pipes, and more.
+- **Text Extraction:** OCR using PaddleOCR around each detected object to extract labels and annotations.
+- **Smart Labeling:** Dynamically scores and assigns the most relevant label to each symbol using proximity, angle, and OCR confidence.
+- **Line Detection:** Uses Hough Transform to detect connection lines between components.
+- **Graph Construction:** Builds a `NetworkX` graph where:
+  - Nodes represent symbols
+  - Edges represent physical (line-based) or proximity-based connections
+- **Graph Visualization:** Annotated graph is saved as an image using OpenCV, color-coded by component type.
 
-## Installation
+---
+---
 
-1. Clone the repository
-2. Create and activate a virtual environment:
-   ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+## 🧠 Technologies Used
 
-## Running the Application
+- **[YOLOv8 (Ultralytics)](https://docs.ultralytics.com/):** For object (symbol) detection.
+- **[PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR):** For extracting text around each symbol.
+- **OpenCV:** For image preprocessing and visualization.
+- **NetworkX:** For creating a graph structure from symbols and line connections.
+- **Shapely & SciPy:** For geometry and spatial relationships.
 
-1. Set the Flask application:
-   ```
-   export FLASK_APP=app.py  # On Windows: set FLASK_APP=app.py
-   ```
-2. Run the application:
-   ```
-   flask run --host=0.0.0.0
-   ```
-   Or simply:
-   ```
-   python app.py
-   ```
-3. Open your browser and navigate to `http://localhost:5000`
+---
 
-## Project Structure
+## 🖼️ Example Output
 
+After processing a P&ID diagram:
+
+- Each symbol is detected and labeled with nearby OCR text.
+- A graph is generated and stored as `generated_graph.jpg` with color-coded nodes and labeled edges.
+
+<img src="static/predict/generated_graph.jpg" alt="Generated Graph" width="700"/>
+
+---
+
+## ⚙️ How to Use
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/pid-symbol-graph.git
+cd pid-symbol-graph
 ```
-pid_analysis_website/
-├── app.py                 # Main Flask application
-├── requirements.txt       # Project dependencies
-├── static/                # Static assets
-│   ├── css/               # CSS files
-│   │   └── main.css       # Main stylesheet
-│   ├── js/                # JavaScript files
-│   │   └── main.js        # Main JavaScript file
-│   └── images/            # Image assets
-├── templates/             # Jinja2 templates
-│   ├── base.html          # Base template with common elements
-│   ├── index.html         # Home page template
-│   └── contact.html       # Contact page template
-└── README.md              # Project documentation
+
+### 2. Install dependencies
+
+Make sure you have Python 3.8+.
+
+```bash
+pip install -r requirements.txt
 ```
+
+> You may also need to install PaddleOCR with GPU support if needed:
+```bash
+pip install paddleocr
+pip install paddlepaddle-gpu
+```
+
+### 3. Add your YOLOv8 model
+
+Place your trained `best.pt` file in the root directory.
+
+### 4. Run the graph generator
+
+```python
+from main import makegraph
+
+makegraph("path/to/your/image.jpg")
+```
+
+Output will be saved at `static/predict/generated_graph.jpg`.
+
+---
+
+## 🎯 Symbol Categories
+
+The model currently supports detection of the following types:
+
+- Valve
+- Pipe
+- Sensor
+- Control Panel
+- Uncategorized
+
+Add more classes by retraining the YOLOv8 model.
+
+---
+
+## 🧩 Future Enhancements
+
+- Export graph structure as JSON or GEXF.
+- Interactive graph visualization in a web app.
+- Support for more symbol types and directional arrows.
+- Better alignment heuristics for rotated text.
+
+
